@@ -1,0 +1,26 @@
+<%= form_for @car do |f| %>
+ <div class="field">
+    <%= f.label :名前 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :クラス  %>
+    <%= f.select :grade, 
+    [["basic", "basic"], 
+    ["midle", "midle"], 
+    ["premium", "premium"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :乗車人数  %>
+    <%= f.number_field :capacity, :size => 10 %>
+  </div>
+
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.select :category, [["basic"], ["middle"], ["premium"]], include_blank: "どの投稿？" %>
+  </div>
+    <%= f.submit "編集する" %>
+  <% end %>

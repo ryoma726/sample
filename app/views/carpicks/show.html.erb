@@ -1,0 +1,246 @@
+<div class="intoro">
+  <h5>診断結果</h5>
+  <p>あなたにおすすめの車種は…</p>
+</div>
+<div class="carpick-container">
+  <% case [@carpick.question1, @carpick.question2, @carpick.question3] %>
+  <% when ["1", "1", "1"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>ノート(ベーシック)</h6>
+          <p>燃費性能と広い室内空間が魅力の、実用的なコンパクトカー</p>
+          <%= image_tag 'car_ph_note.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ノートe-power(ベーシック)</h6>
+          <p>電動駆動ならではの静粛性と力強い加速が魅力のハイブリッドコンパクトカー</p>
+          <%= image_tag 'car_ph_note_e-power.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ヤリスクロス(ベーシック)</h6>
+          <p>アクティブなライフスタイルにぴったりの、コンパクトで高性能なクロスオーバーSUV</p>
+          <%= image_tag 'car_ph_yariscross.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["1", "1", "2"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>ノート-オーラ(ベーシック)</h6>
+          <p>高級感あふれるデザインと最新の技術が融合した、上質なコンパクトカー</p>
+          <%= image_tag 'car_ph_aura.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">  
+          <h6>CX-30(ミドル)</h6>
+          <p>コンパクトさと快適な乗り心地を両立した、スタイリッシュなSUV</p>
+          <%= image_tag 'car_ph_cx-30.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">  
+          <h6>mazda3(ベーシック)</h6>
+          <p>洗練されたデザインと高い走行性能を兼ね備えた、スタイリッシュなコンパクトカー</p>
+          <%= image_tag 'car_ph_mazda3.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["1", "2", "1"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">   
+          <h6>ノート-オーラ(ベーシック)</h6>
+          <p>高級感あふれるデザインと最新の技術が融合した、上質なコンパクトカー</p>
+          <%= image_tag 'car_ph_aura.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>アクア(ベーシック)</h6>
+          <p> 圧倒的な燃費性能とコンパクトさで、都市部での移動に最適なハイブリッドカー</p>
+          <%= image_tag 'car_ph_aqua.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">   
+          <h6>ヤリスクロス(ベーシック)</h6>
+          <p>アクティブなライフスタイルにぴったりの、コンパクトで高性能なクロスオーバーSUV</p>
+          <%= image_tag 'car_ph_yariscross.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["1", "2", "2"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>CX-5(ミドル)</h6>
+          <p>洗練されたデザインとダイナミックな走行性能が魅力のマツダSUV</p>
+          <%= image_tag 'car_ph_cx-5.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>bz4x(プレミアム)</h6>
+          <p>トヨタ初の量産EV、革新的なデザインと優れた環境性能を誇るSUV</p>
+          <%= image_tag 'car_ph_bz4x.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ノート-オーラ(ベーシック)</h6>
+          <p>高級感あふれるデザインと最新の技術が融合した、上質なコンパクトカー</p>
+          <%= image_tag 'car_ph_aura.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["1", "3", "1"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>ソリオ(ベーシック)</h6>
+          <p>小回りが利き、広い室内を備えた、街乗りに最適なコンパクトカー</p>
+          <%= image_tag 'car_ph_solio.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ライズ(ベーシック)</h6>
+          <p>スタイリッシュで機能性が高い、最新技術を取り入れたコンパクトSUV</p>
+          <%= image_tag 'car_ph_raize.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>フィット(ベーシック)</h6>
+          <p>広々とした室内と抜群の使い勝手で人気の、コンパクトハッチバック</p>
+          <%= image_tag 'car_ph_fit.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["1", "3", "2"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>シエンタ(ミドル)</h6>
+          <p>コンパクトなボディに広い室内空間と多彩なシートアレンジが魅力のミニバン</p>
+          <%= image_tag 'car_ph_sienta.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>スイフト(ベーシック)</h6>
+          <p>スポーティなデザインと軽快な走りが魅力の、コンパクトハッチバック</p>
+          <%= image_tag 'car_ph_swift.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ヤリスクロス(ベーシック)</h6>
+          <p>アクティブなライフスタイルにぴったりの、コンパクトで高性能なクロスオーバーSUV</p>
+          <%= image_tag 'car_ph_yariscross.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["2", "1", "1"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>ノア(プレミアム)</h6>
+          <p>室内の広さと使い勝手の良さが際立つ、家族向けミニバン</p>
+          <%= image_tag 'car_ph_noah.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>セレナ(プレミアム)</h6>
+          <p>広々とした室内と充実の装備が、家族の快適な旅をサポートするミニバン</p>
+          <%= image_tag 'car_ph_serena.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["2", "1", "2"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>シエンタ(ミドル)</h6>
+          <p>コンパクトなボディに広い室内空間と多彩なシートアレンジが魅力のミニバン</p>
+          <%= image_tag 'car_ph_sienta.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ノア(プレミアム)</h6>
+          <p>室内の広さと使い勝手の良さが際立つ、家族向けミニバン</p>
+          <%= image_tag 'car_ph_noah.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+    
+  <% when ["2", "2", "1"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>フリード(ミドル)</h6>
+          <p>コンパクトながら多彩なシートアレンジが可能な、家族に優しいミニバン</p>
+          <%= image_tag 'car_ph_freed.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>シエンタ(ミドル)</h6>
+          <p>コンパクトなボディに広い室内空間と多彩なシートアレンジが魅力のミニバン</p>
+          <%= image_tag 'car_ph_sienta.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["2", "2", "2"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>シエンタ(ミドル)</h6>
+          <p>コンパクトなボディに広い室内空間と多彩なシートアレンジが魅力のミニバン</p>
+          <%= image_tag 'car_ph_sienta.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ノア(プレミアム)</h6>
+          <p>室内の広さと使い勝手の良さが際立つ、家族向けミニバン</p>
+          <%= image_tag 'car_ph_noah.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["2", "3", "1"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>シエンタ(ミドル)</h6>
+          <p>コンパクトなボディに広い室内空間と多彩なシートアレンジが魅力のミニバン</p>
+          <%= image_tag 'car_ph_sienta.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>セレナ(プレミアム)</h6>
+          <p>広々とした室内と充実の装備が、家族の快適な旅をサポートするミニバン</p>
+          <%= image_tag 'car_ph_serena.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ノア(プレミアム)</h6>
+          <p>室内の広さと使い勝手の良さが際立つ、家族向けミニバン</p>
+          <%= image_tag 'car_ph_noah.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+
+  <% when ["2", "3", "2"] %>
+    <div class="car-conteiner">
+      <div class="car-content">
+        <div class="car-about">
+          <h6>シエンタ(ミドル)</h6>
+          <p>コンパクトなボディに広い室内空間と多彩なシートアレンジが魅力のミニバン</p>
+          <%= image_tag 'car_ph_sienta.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+        <div class="car-about">
+          <h6>ノア(プレミアム)</h6>
+          <p>室内の広さと使い勝手の良さが際立つ、家族向けミニバン</p>
+          <%= image_tag 'car_ph_noah.jpg', alt: 'レモンの車1', class: 'car-image' %>
+        </div>
+      </div>
+      <div class="car-text"><%= link_to "もう一度診断する", new_carpick_path, class: "link" %></div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+<h1>premium一覧</h1>
+<div class="container-premium">
+  <% @cars.each do |t| %>
+    <% if t.category == "premium" %>  
+      <div class="tweet">
+        <div class="c-image-premium">
+          <%= image_tag t.image_url, size: "250x200" if t.image? %>
+        </div>
+        <%= t.name %>
+        <%= t.grade %>
+        <%= t.capacity %>
+        <%= link_to "詳細へ", car_path(t.id) %>
+        <%= link_to "一覧へ", cars_hajimari_path %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

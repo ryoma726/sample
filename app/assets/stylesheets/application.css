@@ -1,0 +1,110 @@
+/* /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  * {
+    padding: 0;
+    margin: 0;
+
+  body {
+    background-image: url('monokuro.avif'); /* 背景画像の指定 */
+    background-size: cover; /* 画像を画面全体にフィットさせる */
+    background-repeat: no-repeat; /* 繰り返しを防ぐ */
+    background-position: center; /* 画像を中央に配置 */
+    margin: 0;
+    padding: 0;
+    height: 1500px;
+    }
+
+  }
+  header {
+    /* background-color: #0b252f; */
+    padding: 10px;
+    margin: 10px;
+    height: 70px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+  }
+
+  header a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  a:hover {
+    transform: translateY(-5px); 
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+  }
+
+  .header a:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    color: black;
+    margin-left: 20px;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    /* display: flex;  */
+    list-style: none;
+    margin: 0;
+    display: flex;
+  }
+  header li {
+    /* list-style: none;
+    margin-right: 40px; */
+    margin: 0 0 0 15px;
+    font-size: 14px;
+  }
+  footer {
+    color: white;
+    height: 20px;
+    background-color: #0b252f;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: flex-end;
+  }
+
+  .header-list {
+  margin: 10px;
+  font-size: 15px;
+  }
+
+  

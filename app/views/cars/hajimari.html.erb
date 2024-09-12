@@ -1,0 +1,45 @@
+<body>
+    <div class="button-container">
+      <div class="button-basic">
+        <%= button_to "ベーシック", cars_basic_path %>
+      </div>
+      <div class="button-basic">
+        <%= button_to "ミドル", cars_middle_path %>
+      </div>
+      <div class="button-basic">
+        <%= button_to "プレミアム", cars_premium_path %>
+      </div>
+    </div>
+</body>
+
+<h1>車種一覧</h1>
+<h3>一覧ページ</h3>
+<%= link_to "新規投稿へ", new_car_path %>
+<div class="tweets-container">
+  <% @cars.each do |t| %>
+    <div class="tweet">
+      <div class="c-image">
+          <%= image_tag t.image_url, size: "250x160" if t.image? %>
+      </div>
+      <%= t.name %>
+      <%= t.grade %>
+      <%= t.capacity %>
+      <%= link_to "詳細へ", car_path(t.id) %>
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(t) %>
+          <%= link_to car_like_path(id: t.id, car_id: t.id), method: :delete do %>
+            <p>いいねを取り消す</p><%= t.likes.count %>
+          <% end %>
+        <% else %>
+          <%= link_to car_likes_path(id: t.id, car_id: t.id), method: :post do %>
+            <p>いいね</p><%= t.likes.count %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <p>いいねの数 = </p><%= t.likes.count %>
+      <% end %>
+
+
+    </div>
+  <% end %>
+</div>

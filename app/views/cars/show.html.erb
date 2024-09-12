@@ -1,0 +1,36 @@
+<h1>CarShare</h1>
+<h3>Car詳細</h3>
+<div class="car">
+  <p><%= @car.name %></p>
+  <p><%= @car.grade %></p>
+  <p><%= @car.capacity %></p>
+  <p><%= @car.image %></p>
+  <p><%= @car.created_at %></p>
+  <%= link_to "編集する", edit_car_path(@car.id) %>
+  <%= button_to "削除する", car_path(@car.id), method: :delete %>  
+  <%= @car.user.email %>
+
+  <p><%= @car.name %></p>
+  <p><%= @car.created_at %></p>
+    <% if user_signed_in? %>
+      <% if current_user.already_liked?(@car) %>
+        <%= link_to car_like_path(@car), method: :delete do %>
+          <p>いいねを取り消す</p><%= @car.likes.count %>
+        <% end %>
+      <% else %>
+        <%= link_to car_likes_path(@car), method: :post do %>
+          <p>いいね</p><%= @car.likes.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <p>いいねの数 = </p><%= @car.likes.count %>
+    <% end %>
+  <%= link_to "編集する", edit_car_path(@car.id) %>
+</div>
+
+<h2>いいねしたユーザー</h2>
+<% @car.liked_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>
+
+<%= link_to "Car一覧に戻る", cars_path %>

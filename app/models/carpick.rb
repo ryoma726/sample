@@ -1,0 +1,2 @@
+class Carpick < ApplicationRecord
+end

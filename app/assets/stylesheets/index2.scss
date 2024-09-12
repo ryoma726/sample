@@ -1,0 +1,55 @@
+// Place all the styles related to the cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container-premium {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 30px;
+}
+
+.c-image-premium:hover {
+    transform: scale(1.1);
+}
+
+.c-image-premium {
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba($color: #a62f2f, $alpha: 1.0)
+    transition all ease-in-out 0.5s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+}
+
+.button-container {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.button-basic {
+    margin: 10px;
+}
+
+
+
+.ryoukinn {
+    padding: 30px;
+}
+
+.ryoukinn-b {
+    padding: 30px;
+}
+
+.ryoukinn-m {
+    padding: 30px;
+
+}
+
+.ryoukinn-p {
+    padding: 30px;
+}
+
+

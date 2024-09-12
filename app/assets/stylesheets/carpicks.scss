@@ -1,0 +1,278 @@
+// Place all the styles related to the carpicks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.car-image {
+  padding: 10px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba($color: #a62f2f, $alpha: 1.0)
+  transition all ease-in-out 0.5s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.car-image:hover {
+  transform: scale(1.1);
+}
+
+.c-image:hover{
+  transform: scale(1.1);
+}
+
+.intoro {
+text-align: center;
+padding: 80px 0px 50px 0px;
+// background-color: #AAAAAA;
+}
+
+.carpick-container {
+  display: flex;
+  height: 750px;
+  justify-content: center;
+  // background-color: #AAAAAA;
+}
+
+.car-content {
+  display: flex;
+  text-align: center;
+  height: 400px;
+}
+
+.car-about {
+  position: relative;
+  margin: 30px 0px 30px 0px;
+  height: 340px;
+  padding: 0px 30px 0px 30px;
+}
+
+.car-text {
+  text-align: center;
+}
+
+
+
+
+.mazusinndan {
+  // background-color: #AAAAAA	;
+  height: 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+.carpick-shindann {
+  position: relative;
+  height: 500px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sindanbotan {
+  position: relative;
+  margin: 30px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col {
+  margin: 30px 30px 30px 30px;
+}
+
+.col-c {
+  margin: 30px 30px 30px 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 80px;
+  position: relative;
+  background: black;
+  border: 1px solid #228bc8;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 0 45px 0 25px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  text-align: left;
+  text-decoration: none;
+  transition-duration: 0.3s;
+
+}
+
+.col-c:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  margin-top: -6px;
+}
+
+.col-c:hover {
+  background: grey;
+  color: #228bc8;
+}
+
+.col-c:hover:before {
+  border-top: 2px solid #228bc8;
+  border-right: 2px solid #228bc8
+}
+
+
+
+
+
+/* ラジオボタンの容器 */
+.col-c label {
+  position: relative;
+  padding-left: 45px;
+  margin-right: 30px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  color: white; /* デフォルトは濃いグレーのテキスト */
+  transition: color 0.3s ease; /* 文字色にトランジション効果を追加 */
+}
+
+/* ラジオボタンを非表示にしてカスタムデザイン */
+.col-c input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* カスタムのチェックマーク */
+.col-c label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #eee; /* ライトグレー */
+  border-radius: 50%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ホバー時のデザイン（モノクロバージョン） */
+.col-c label:hover:before {
+  background-color: #ccc; /* ホバー時に少し暗いグレー */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ホバー時に文字色を反転（白に） */
+.col-c label:hover {
+  color: black; /* ホバー時に文字色を白に反転 */
+}
+
+/* チェックされた時のカスタムチェックマーク */
+.col-c input:checked + label:before {
+  background-color: #000; /* 選択時は黒 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 黒の影 */
+}
+
+/* チェックされた時に文字色を反転（白に） */
+.col-c input:checked + label {
+  color: #fff; /* チェックされた時に文字色を白に反転 */
+}
+
+/* チェックマーク内部の点 */
+.col-c label:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.col-c input:checked + label:after {
+  display: block;
+}
+
+.col-c label:after {
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white; /* モノクロなので内部の点は白 */
+}
+
+h6 {
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+// .col-c label {
+//   position: relative;
+//   padding-left: 45px;  /* 左のスペースを広げる */
+//   margin-right: 30px;  /* ラベル間のスペースを広げる */
+//   cursor: pointer;
+//   font-size: 22px;     /* テキストを大きくする */
+//   user-select: none;
+// }
+
+// /* ラジオボタンを非表示にしてカスタムデザイン */
+// .col-c input[type="radio"] {
+//   position: absolute;
+//   opacity: 0;
+//   cursor: pointer;
+// }
+
+// /* カスタムのチェックマーク */
+// .col-c label:before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 30px;    /* 高さを大きくする */
+//   width: 30px;     /* 幅を大きくする */
+//   background-color: #eee;
+//   border-radius: 50%;
+// }
+
+// /* チェックされた時のカスタムチェックマーク */
+// .col-c input:checked + label:before {
+//   background-color: #2196F3;
+// }
+
+// /* チェックマーク内部の点 */
+// .col-c label:after {
+//   content: "";
+//   position: absolute;
+//   display: none;
+// }
+
+// .col-c input:checked + label:after {
+//   display: block;
+// }
+
+// .col-c label:after {
+//   top: 8px;        /* 内側の白丸の位置を調整 */
+//   left: 8px;
+//   width: 14px;     /* 内側の白丸の大きさ */
+//   height: 14px;
+//   border-radius: 50%;
+//   background: white;
+// }
+
+// .car-image {
+//     width: 150px;            /* 画像の幅を150pxに設定 */
+//     height: auto;            /* 縦横比を保ちながら高さを自動調整 */
+//     border-radius: 8px;      /* 画像に丸みを持たせる */
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 画像に軽い影をつけて浮き上がらせる */
+// }

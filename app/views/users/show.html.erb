@@ -1,0 +1,28 @@
+<h1>My page</h1>
+<p>名前 : <%= @user.name %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>プロフィール : <%= @user.profile %></p>
+
+<% if current_user.id == @user.id %>
+  <%= link_to "編集する", edit_user_registration_path %>
+<% end %>
+
+<h2>ユーザーの投稿一覧</h2>
+<% @user.cars.each do |t| %>
+  <%= t.user.name %>
+  <%= t.name %>
+  <%= t.grade %>
+  <%= t.capacity %>
+  <%= t.image %>
+<% end %>
+
+<h2>ユーザーがいいねした投稿一覧</h2>
+<% @user.liked_cars.each do |t| %>
+  <%= t.user.name %>
+  <%= t.name %>
+  <%= t.grade %>
+  <%= t.capacity %>
+  <%= t.image %>
+<% end %>
+
+<%= link_to "一覧に戻る", cars_path %>

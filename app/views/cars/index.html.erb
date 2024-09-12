@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>緯線ボタンの例</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="button-container">
+        <div class="button-basic">
+            <%= button_to "ベーシック", cars_basic_path %>
+        </div>
+        <div class="button-basic">
+            <%= button_to "ミドル", cars_middle_path %>
+        </div>
+        <div class="button-basic">
+            <%= button_to "プレミアム", cars_premium_path %>
+        </div>
+        <%= link_to "新規投稿へ", new_car_path %>
+        <%= link_to "一覧へ", cars_hajimari_path %>
+        <%= link_to "診断を始める", new_carpick_path, class: "link" %>
+    </div>
+
+    <!-- 新しく追加する料金情報のセクション -->
+    <div class="pricing-container">
+      <h2>料金プラン</h2>
+
+      <div class="pricing-table">
+        <div class="pricing-basic">
+          <h3>ベーシック</h3>
+          <p>平日料金（15分）: ¥220</p>
+          <p>距離料金（1Km当たり）: ¥20</p>
+          <p>6時間パック: ¥4,080</p>
+        </div>
+
+        <div class="pricing-middle">
+          <h3>ミドル</h3>
+          <p>平日料金（15分）: ¥270</p>
+          <p>距離料金（1Km当たり）: ¥20</p>
+          <p>6時間パック: ¥4,480</p>
+        </div>
+
+        <div class="pricing-premium">
+          <h3>プレミアム</h3>
+          <p>平日料金（15分）: ¥320</p>
+          <p>距離料金（1Km当たり）: ¥20</p>
+          <p>6時間パック: ¥5,480</p>
+        </div>
+      </div>
+    </div>
+</body>
