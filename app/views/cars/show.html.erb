@@ -2,13 +2,53 @@
 <h3>Car詳細</h3>
 <div class="car">
   <p><%= @car.name %></p>
-  <p><%= @car.grade %></p>
-  <p><%= @car.capacity %></p>
+  感想:<p><%= @car.body%></p>
   <p><%= @car.image %></p>
   <p><%= @car.created_at %></p>
   <%= link_to "編集する", edit_car_path(@car.id) %>
   <%= button_to "削除する", car_path(@car.id), method: :delete %>  
   <%= @car.user.email %>
+
+<div>
+    <h2>総合評価：
+    <span class="star-rating">
+       <span class="star-rating-front" style="width: <%= getPercent(@car.hoshihyouka) %>%;">★★★★★</span>
+       <span class="star-rating-back">★★★★★</span>
+    </span> 
+    </h2>
+    </div>
+    
+    <!--- 総合評価の星の部分終わり------->
+    
+    
+    <!--- 授業レベルの星の部分 ------------>
+    <div>
+    <h2>快適さ、スピーカーの質とか！：
+    <span class="star-rating">
+       <span class="star-rating-front" style="width: <%= getPercent(@car.comfort) %>%;">★★★★★</span>
+       <span class="star-rating-back">★★★★★</span>
+    </span>
+    </h2>
+    </div>
+    <!--- 授業レベルの星の部分終わり-------->
+    <div>
+    <h2>運転のしやすさ：
+    <span class="star-rating">
+       <span class="star-rating-front" style="width: <%= getPercent(@car.ease_of_driving) %>%;">★★★★★</span>
+       <span class="star-rating-back">★★★★★</span>
+    </span>
+    </h2>
+    </div>
+
+
+    </div>
+
+
+
+
+
+
+
 
   <p><%= @car.name %></p>
   <p><%= @car.created_at %></p>
