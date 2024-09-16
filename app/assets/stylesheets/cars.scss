@@ -41,3 +41,74 @@
     margin-bottom: 5px;
     font-size: 1rem;
 }
+
+.setumei-container {
+    width: 80%;
+    margin: 0 auto; /* コンテンツを中央に配置 */
+    padding: 20px;
+    background-color: #f9f9f9; /* 背景色を淡いグレーに */
+    border-radius: 10px; /* 角を少し丸く */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を付けて立体感を演出 */
+    text-align: center; /* テキストを中央揃え */
+}
+
+
+.title {
+    font-size: 1.5em; /* タイトルを大きめに */
+    font-weight: bold; /* タイトルを太字に */
+    color: #333; /* 濃いグレーの文字色 */
+    margin-bottom: 10px; /* タイトル下に少し余白 */
+}
+
+.description {
+    font-size: 1.2em; /* 説明文のフォントサイズを少し大きく */
+    color: #666; /* 説明文を少し薄めの色に */
+}
+
+.field {
+    margin-bottom: 15px; /* 各フィールドの下に余白を追加 */
+}
+
+.field label {
+    display: block; /* ラベルをブロック表示にして上に配置 */
+    margin-bottom: 5px; /* ラベルと入力フィールドの間に余白 */
+    font-weight: bold; /* ラベルを強調 */
+}
+
+.field input[type="text"], .field textarea, .field select, .field input[type="file"] {
+    width: 100%; /* 入力フィールドをフォームの幅いっぱいに */
+    padding: 10px; /* 入力欄に余白 */
+    font-size: 1em; /* フォントサイズを適度に */
+    border: 1px solid #ccc; /* 枠線の色を薄いグレーに */
+    border-radius: 5px; /* 角を少し丸く */
+    box-sizing: border-box; /* パディングを含めて幅を調整 */
+}
+
+.actions input[type="submit"] {
+    padding: 10px 20px; /* ボタンに十分な余白 */
+    font-size: 1em; /* ボタンのフォントサイズ */
+    background-color: #007BFF; /* プライマリボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    border: none; /* ボタンの枠線を消す */
+    border-radius: 5px; /* 角を丸く */
+    cursor: pointer; /* カーソルをポインターに */
+    margin-top: 10px; /* ボタン上部に少し余白 */
+}
+
+.actions input[type="submit"]:hover {
+    background-color: #0056b3; /* ホバー時にボタンの背景色を少し濃く */
+}
+
+/* リンクのスタイルを修正したクラス */
+.back-link {
+    display: inline-block;
+    margin-top: 20px; /* リンクの上に余白を追加 */
+    color: #007BFF; /* リンクの色をボタンに合わせる */
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+
