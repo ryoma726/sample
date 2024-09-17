@@ -1,17 +1,10 @@
-<h1>CarShare</h1>
-<h3>Car詳細</h3>
 
 <div class="car-details">
   <div class="car-info">
-    <!-- 車の名前の表示 -->
     <p><strong>車の名前:</strong> <%= @car.name %></p>
-
     <p><strong>車種:</strong> <%= @car.shashu %></p>
-
-    <!-- 感想の表示 -->
     <p><strong>感想:</strong> <%= @car.body %></p>
 
-    <!-- 画像があれば表示 -->
     <p>
       <% if @car.image.present? %>
         <%= image_tag @car.image.url %>
@@ -36,7 +29,7 @@
   </div>
 
   <div class="rating-section">
-    <h2>快適さ、スピーカーの質とか！：
+    <h2>快適さ、スピーカーの音質など：
       <span class="star-rating">
         <span class="star-rating-front" style="width: <%= getPercent(@car.comfort) %>%;">★★★★★</span>
         <span class="star-rating-back">★★★★★</span>
@@ -81,5 +74,5 @@
   </ul>
 
   <!-- 戻るリンク -->
-  <%= link_to "Car一覧に戻る", cars_path, class: "back-link" %>
+  <%= link_to "ホームに戻る", cars_path, class: "back-link" %>
 </div>

@@ -1,5 +1,5 @@
-<h1>使ってみた感想！</h1>
-<h3>新規投稿ページ</h3>
+<h1 id="sainappu">使ってみた感想！</h1>
+<h3 id="sainappu">新規投稿ページ</h3>
 
 <%= form_for @car, html: { class: "new-post-form" } do |f| %>
 
@@ -42,7 +42,7 @@
     <label for="star5"><span class="text">最悪</span>★</label>
   </div>
 
-  <h5>快適さ、スピーカーの質とか！</h5>
+  <h5>快適さ、スピーカーの音質など</h5>
   <div class="post_form">
     <%= f.radio_button :comfort, 5, id: 'star6' %>
     <label for="star6"><span class="text">めちゃくちゃいい</span>★</label>
