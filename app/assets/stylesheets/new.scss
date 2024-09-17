@@ -1,0 +1,74 @@
+/* 新規投稿フォーム全体のスタイル */
+.new-post-form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 各フィールドのスタイル */
+  .new-post-form .field {
+    margin-bottom: 20px;
+  }
+  
+  .new-post-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .new-post-form input[type="text"],
+  .new-post-form textarea,
+  .new-post-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+  
+  /* 画像アップロードフィールド */
+  .new-post-form input[type="file"] {
+    border: none;
+  }
+  
+  /* サブミットボタンのスタイル */
+  .new-post-form .actions input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .new-post-form .actions input[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* 戻るリンクのスタイル */
+  .new-post-form .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .new-post-form .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* 見出しのスタイル */
+  .new-post-form h1, .new-post-form h3 {
+    text-align: center;
+    color: #333;
+  }
+  

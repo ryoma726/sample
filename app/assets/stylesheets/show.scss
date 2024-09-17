@@ -1,0 +1,110 @@
+/* 詳細ページ全体のスタイル */
+.car-details {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 車の情報部分 */
+  .car-info {
+    margin-bottom: 20px;
+  }
+  
+  .car-info p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .car-info img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  /* 総合評価、快適さ、運転しやすさの評価スタイル */
+  .rating-section {
+    margin: 20px 0;
+  }
+  
+  .rating-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .star-rating {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+  }
+  
+  .star-rating-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ffd700;
+  }
+  
+  .star-rating-back {
+    color: #ccc;
+  }
+  
+  /* ボタンのスタイル */
+  .car-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .car-actions a, .car-actions form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .car-actions form button {
+    background-color: #dc3545;
+  }
+  
+  .car-actions a:hover, .car-actions form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* いいね機能とユーザーリスト */
+  .likes-section {
+    margin-top: 30px;
+  }
+  
+  .likes-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .likes-section li {
+    list-style-type: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  /* 戻るリンク */
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  

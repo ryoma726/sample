@@ -6,15 +6,6 @@
 </head>
 <body>
     <div class="button-container">
-        <div class="button-basic">
-            <%= button_to "ベーシック", cars_basic_path %>
-        </div>
-        <div class="button-basic">
-            <%= button_to "ミドル", cars_middle_path %>
-        </div>
-        <div class="button-basic">
-            <%= button_to "プレミアム", cars_premium_path %>
-        </div>
         <%= link_to "新規投稿へ", new_car_path %>
         <%= link_to "一覧へ", cars_hajimari_path %>
         <%= link_to "診断を始める", new_carpick_path, class: "link" %>

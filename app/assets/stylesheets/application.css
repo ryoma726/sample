@@ -20,7 +20,6 @@
   body {
     background-image: url('monokuro.avif'); /* 背景画像の指定 */
     background-size: cover; /* 画像を画面全体にフィットさせる */
-    background-repeat: no-repeat; /* 繰り返しを防ぐ */
     background-position: center; /* 画像を中央に配置 */
     margin: 0;
     padding: 0;
@@ -37,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 95vw;  /* ビューポートの幅に基づいた100% */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
   }
 

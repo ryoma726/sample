@@ -1,69 +1,83 @@
 <h1>CarShare</h1>
 <h3>Car詳細</h3>
-<div class="car">
-  <p><%= @car.name %></p>
-  感想:<p><%= @car.body%></p>
-  <p><%= @car.image %></p>
-  <p><%= @car.created_at %></p>
-  <%= link_to "編集する", edit_car_path(@car.id) %>
-  <%= button_to "削除する", car_path(@car.id), method: :delete %>  
-  <%= @car.user.email %>
 
-<div>
+<div class="car-details">
+  <div class="car-info">
+    <!-- 車の名前の表示 -->
+    <p><strong>車の名前:</strong> <%= @car.name %></p>
+
+    <!-- 感想の表示 -->
+    <p><strong>感想:</strong> <%= @car.body %></p>
+
+    <!-- 画像があれば表示 -->
+    <p>
+      <% if @car.image.present? %>
+        <%= image_tag @car.image.url %>
+      <% end %>
+    </p>
+
+    <!-- 投稿日時の表示 -->
+    <p><strong>投稿日時:</strong> <%= @car.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+
+    <!-- 投稿者の表示 -->
+    <p><strong>投稿者:</strong> <%= @car.user.email %></p>
+  </div>
+
+  <!-- 評価セクション -->
+  <div class="rating-section">
     <h2>総合評価：
-    <span class="star-rating">
-       <span class="star-rating-front" style="width: <%= getPercent(@car.hoshihyouka) %>%;">★★★★★</span>
-       <span class="star-rating-back">★★★★★</span>
-    </span> 
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= getPercent(@car.hoshihyouka) %>%;">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span>
     </h2>
-    </div>
-    
-    <div>
+  </div>
+
+  <div class="rating-section">
     <h2>快適さ、スピーカーの質とか！：
-    <span class="star-rating">
-       <span class="star-rating-front" style="width: <%= getPercent(@car.comfort) %>%;">★★★★★</span>
-       <span class="star-rating-back">★★★★★</span>
-    </span>
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= getPercent(@car.comfort) %>%;">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span>
     </h2>
-    </div>
+  </div>
 
-    <div>
+  <div class="rating-section">
     <h2>運転のしやすさ：
-    <span class="star-rating">
-       <span class="star-rating-front" style="width: <%= getPercent(@car.ease_of_driving) %>%;">★★★★★</span>
-       <span class="star-rating-back">★★★★★</span>
-    </span>
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= getPercent(@car.ease_of_driving) %>%;">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span>
     </h2>
-</div>
+  </div>
 
+  <!-- 編集・削除アクション -->
+  <div class="car-actions">
+    <%= link_to "編集する", edit_car_path(@car.id), class: "btn-edit" %>
+    <%= button_to "削除する", car_path(@car.id), method: :delete, class: "btn-delete" %>
+  </div>
 
+  <!-- いいね機能 -->
+  <div class="likes-section">
+    <p>いいねの数：<%= @car.likes.count %></p>
 
-
-
-
-
-
-  <p><%= @car.name %></p>
-  <p><%= @car.created_at %></p>
     <% if user_signed_in? %>
       <% if current_user.already_liked?(@car) %>
-        <%= link_to car_like_path(@car), method: :delete do %>
-          <p>いいねを取り消す</p><%= @car.likes.count %>
-        <% end %>
+        <%= link_to "いいねを取り消す", car_like_path(@car), method: :delete %>
       <% else %>
-        <%= link_to car_likes_path(@car), method: :post do %>
-          <p>いいね</p><%= @car.likes.count %>
-        <% end %>
+        <%= link_to "いいね", car_likes_path(@car), method: :post %>
       <% end %>
-    <% else %>
-      <p>いいねの数 = </p><%= @car.likes.count %>
     <% end %>
-  <%= link_to "編集する", edit_car_path(@car.id) %>
+  </div>
+
+  <!-- いいねしたユーザー -->
+  <h2>いいねしたユーザー</h2>
+  <ul>
+    <% @car.liked_users.each do |user| %>
+      <li><%= user.email %></li>
+    <% end %>
+  </ul>
+
+  <!-- 戻るリンク -->
+  <%= link_to "Car一覧に戻る", cars_path, class: "back-link" %>
 </div>
-
-<h2>いいねしたユーザー</h2>
-<% @car.liked_users.each do |user| %>
-  <li><%= user.email %></li>
-<% end %>
-
-<%= link_to "Car一覧に戻る", cars_path %>

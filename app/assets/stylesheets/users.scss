@@ -9,3 +9,158 @@
   a:hover {
     text-decoration: underline;
   }
+
+  /* ログインフォーム全体 */
+.login-form {
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* フィールド全体 */
+.login-form .field {
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* 入力フィールド */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* チェックボックス */
+.login-form .field input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* サブミットボタン */
+.login-form .actions input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.login-form .actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* リンク */
+.login-form a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #007bff;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/* タイトル */
+.login-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* サインアップフォーム全体 */
+.signup-form {
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* フィールド全体 */
+.signup-form .field {
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* 入力フィールド */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* サブミットボタン */
+.signup-form .actions input[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.signup-form .actions input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* リンク */
+.signup-form a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #007bff;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
+}
+
+/* タイトル */
+.signup-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* エラーメッセージのスタイル */
+.signup-form .error_messages {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
