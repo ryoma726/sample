@@ -32,6 +32,8 @@ class CarsController < ApplicationController
 
     def show
       @car = Car.find(params[:id])
+      @comments = @car.comments
+      @comment = Comment.new
     end
 
     def edit

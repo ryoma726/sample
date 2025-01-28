@@ -7,6 +7,7 @@ class User < ApplicationRecord
          has_many :cars, dependent: :destroy #追記 ユーザーが削除されたら、ツイートも削除されるようになります。すでに書いてある場合は追記しなくて大丈夫です。
          has_many :likes, dependent: :destroy
          has_many :liked_cars, through: :likes, source: :car
+         has_many :comments, dependent: :destroy
         def already_liked?(car)
           self.likes.exists?(car_id: car.id)
         end
