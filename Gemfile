@@ -61,3 +61,25 @@ gem 'devise'
 group :production do
   gem 'pg', '~> 1.4'
 end
+
+databases:
+  - name: driveDB
+    databaseName: driveDB
+    user: ryouma
+    region: singapore
+
+services:
+  - type: web
+    name: ryouma
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: driveDB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
